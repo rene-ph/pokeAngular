@@ -1,0 +1,66 @@
+<div ng-controller="DescriptionCtrl as description">
+  <div class="row">
+    <div class="col-xs-4">
+      <img ng-src="assets/img/pokemons/{{description.pokemon.id}}.png" alt="pokemonImage"/>
+    </div>
+    <div class="col-xs-8">
+      <div class="row">
+        <div class="col-xs-2">
+            <h4 class="main-header" ng-bind=" '#' + description.pokemon.id"></h4>
+        </div>
+        <div class="col-xs-4">
+          <h4 class="main-header" ng-bind="description.pokemon.name"></h4>
+        </div>
+        <div class="col-xs-6">
+          <ul>
+            <li class="inline"><img class=" img-responsive" src="assets/img/pokeball.png" alt="pokeball"></li>
+            <li class="inline"><img class=" img-responsive" src="assets/img/star.png" alt="pokeball"> </li>
+          </ul>
+        </div>
+      </div> 
+      <div class="row">
+        <div class="col-xs-12">
+          <p class="inline" ng-bind="description.pokemon.height"></p>
+          <p class="inline" ng-bind="description.pokemon.weight"></p>
+        </div>
+      </div> 
+      <div class="row">
+        <div class="col-xs-12">
+          <p ng-bind="description.pokemon.description">
+          </p>
+        </div>
+        <div class="col-xs-12"> 
+          <ul class="type-pokemon">
+            <li data-ng-repeat="type in description.pokemon.types" ng-bind="type" class="{{type}} inline">
+            </li>
+          </ul>
+        </div>
+      </div> 
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <h5 class="sub-header">General Information</h5>
+    </div>
+    <div class="col-xs-6">
+      <p>Abilities</p>
+    </div>
+    <div class="col-xs-6">
+      <p ng-bind="description.pokemon.abilities"></p>
+    </div> 
+    <div class="col-xs-6">
+      <p>Location</p>
+    </div>
+    <div class="col-xs-6">
+      <p ng-bind="description.pokemon.location"></p>
+    </div>
+    <div class="col-xs-12">
+      <h5 class="sub-header">Evolution</h5>
+    </div>
+    <div data-ng-repeat="pokemon in description.evolutions">
+      <pokemon-list pkmid={{pokemon.id}} pkmname={{pokemon.name}} imageid= {{pokemon.id}}  pkmtype={{pokemon.types}} showicons="false" showlvl="true" pkmlvl={{pokemon.evolutionlvl}}>
+      </pokemon-list> 
+    </div>
+  </div>
+</div>

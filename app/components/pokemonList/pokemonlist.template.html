@@ -1,0 +1,42 @@
+<div class="row">
+	<div class="col-xs-12">
+	  <div class="wrapper-pokemon-list">
+     <div class="row">
+       	<div class="col-xs-4">
+         	<div class="list-pokemon-sprite">
+					  <a ui-sref = 'descriptions({id: pkmid})'>
+  		     	  <img data-ng-src="assets/img/pokemons/{{imageid}}.png" alt="pokemonImage" data-ng-click="setmenu()"/>
+						</a>
+  	     	</div>
+       	</div>
+       	<div class="col-xs-5" class="pull-left">
+       	  <div class="title-pokemon">
+						<strong>
+							<h3 data-ng-bind="pkmname">
+							</h3>
+						</strong>
+						<p class="pkmlvl" data-ng-show={{showlvl}}>
+						  <span data-ng-bind="'LV.'+pkmlvl"></span>
+						</p>
+       	  </div>
+
+          <ul class="type-pokemon">
+            <li data-ng-repeat="types in type" ng-bind="types" class="{{types}} inline">
+            </li>
+          </ul>
+
+       	</div>
+       	<div class="col-xs-3">
+	       	  <div class="number-pokemon pull-right">
+	       	  	<p><span data-ng-bind= "'#'+pkmid"></span></p>
+	       	  </div>
+       	    <ul class="icon-wrapper-pokemon clearfix" data-ng-show={{showicons}}>
+       	  	  <li class="inline"><img class="icon-margin img-responsive" src="assets/img/pokeball.png" alt="pokeball"></li>
+       	  	  <li class="inline"><img class="icon-margin img-responsive" src="assets/img/star.png" alt="pokeball"> </li>
+       	    </ul>
+       </div>
+     </div>
+    </div>
+	</div> 	
+</div>	
+

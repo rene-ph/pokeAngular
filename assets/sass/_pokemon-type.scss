@@ -1,0 +1,82 @@
+//MIXINS
+@mixin pokemon-type($bgColor) {
+  background-color: $bgColor;
+ 	border-radius: 7px;
+	display: inline;
+	padding: 4px 8px 4px 8px;
+	margin-right: 7px; 
+	color: #ffffff;
+}
+
+//TYPE POKEMONS
+.Grass {
+	@include pokemon-type(#00ce00);
+}
+
+.Poison {
+	@include pokemon-type(#b489d3);
+}
+
+.Bug {
+	@include pokemon-type(#A8B820);
+}
+
+.Normal {
+	@include pokemon-type(#A8A878);
+}
+
+.Fighting {
+	@include pokemon-type(#C03028);
+}
+
+.Flying {
+  @include pokemon-type(#A890F0);
+}
+
+.Ground {
+	@include pokemon-type(#E0C068);
+}
+
+.Rock {
+	@include pokemon-type(#B8A038);
+}
+
+.Ghost {
+	@include pokemon-type(#705898);
+}
+
+.Fire {
+	@include pokemon-type(#F08030);
+}
+
+.Water {
+	@include pokemon-type(#6890F0);
+}
+
+.Grass {
+	@include pokemon-type(#78C850);
+}
+
+.Electric {
+	@include pokemon-type(#F8D030);
+}
+
+.Psychic {
+	@include pokemon-type(#F85888);
+}
+
+.Ice {
+	@include pokemon-type(#98D8D8);
+}
+
+.Dragon {
+	@include pokemon-type(#7038F8);
+}
+
+.Fairy {
+	@include pokemon-type(#EE99AC);
+}
+
+.Steel {
+	@include pokemon-type(#B8B8D0);
+}

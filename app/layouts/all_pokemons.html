@@ -1,0 +1,13 @@
+
+<div ng-controller = "SearchCtrl as search ">
+  <div class="row">
+     <search></search>
+     <arrow data-ng-click="search.order()"></arrow>
+   </div>
+</div>
+<div data-ng-controller="PokemonListCtrl as vm" >
+	<div data-ng-repeat="pokemon in vm.pokemons | filter: vm.searchText | orderBy: vm.order">
+      <pokemon-list pkmid= {{pokemon.id}} pkmname={{pokemon.name}} imageid= {{pokemon.id}}  pkmtype={{pokemon.types}} showicons="true" showlvl="false" setmenu=vm.setMenu()>
+      </pokemon-list> 
+  </div>
+</div>

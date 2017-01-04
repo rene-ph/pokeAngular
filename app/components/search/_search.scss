@@ -1,0 +1,18 @@
+//mixins
+@mixin arrows($link) {
+    background-image: $link;
+    height: 40px;
+    width: 40px;
+    display: block;
+    background-size: 40px;
+}
+
+
+//
+.arrow-up {
+  @include arrows(url(../img/sort_asc.png));
+}
+
+.arrow-down {
+  @include arrows(url(../img/sort_desc.png));
+}
